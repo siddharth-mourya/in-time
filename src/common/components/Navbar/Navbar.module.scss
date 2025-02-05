@@ -1,0 +1,34 @@
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .navbarBrand {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+  }
+  
+  .navbarNav {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navItem a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      color: var(--text-secondary);
+    }
+  }
+  

@@ -1,0 +1,23 @@
+// _breakpoints.scss
+
+$xs: 480px;
+// Extra sall devices (phones)
+$sm: 768px;
+// Small devices (tablets)
+$md: 1024px;
+// Medium devices (small laptops)
+$lg: 1200px;
+// Large devices (desktops)
+$xl: 1440px;
+
+@mixin max-breakpoint($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin min-breakpoint($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}

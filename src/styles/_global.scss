@@ -1,0 +1,78 @@
+// Apply Theme
+body {
+    background: url("/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: var(--text-primary);
+    margin: 0;
+    &:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); // Dark overlay
+        z-index: -1; // Places it behind the content
+      }
+  }
+
+  
+  a {
+    color: var(--accent-primary);
+    &:hover {
+      color: var(--accent-primary);
+    }
+  }
+  
+  button {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border-radius: var(--border-radius);
+    &:hover {
+      background: var(--button-hover-bg);
+    }
+  }
+  
+  :root {
+    // Black Dark Theme SCSS Variables
+  
+    // Primary Colors
+    --primary-bg: #000000; // Pure black background
+    --secondary-bg: #121212; // Slightly lighter black for contrast
+    --tertiary-bg: #1e1e1e; // Dark grey for subtle depth
+  
+    // Text Colors
+    --text-primary: #ffffff; // Pure white for high contrast
+    --text-secondary: #b3b3b3; // Light grey for secondary text
+    --text-muted: #777777; // Muted grey for less emphasis
+  
+    // Border & Shadow
+    --border-color: #333333; // Dark grey for borders
+    --box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  
+    // Accent Colors
+    --accent-primary: #ff9800; // Orange for highlights
+    --accent-secondary: #ff5722; // Red-orange for warnings
+    --accent-success: #4caf50; // Green for success
+    --accent-error: #f44336; // Red for errors
+    --accent-info: #2196f3; // Blue for informational elements
+  
+    // Button Colors
+    --button-bg: #222222;
+    --button-text: #ffffff;
+    --button-hover-bg: #333333;
+  
+    // Inputs
+    --input-bg: #1a1a1a;
+    --input-border: #444444;
+    --input-text: #ffffff;
+    --input-placeholder: #666666;
+  
+    // General Spacing & Radius
+    --border-radius: 6px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+  }
+  
