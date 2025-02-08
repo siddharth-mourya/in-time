@@ -1,7 +1,5 @@
 .timer {
   position: relative;
-  width: 750px;
-  height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,5 +7,6 @@
   .currentTime {
     position: absolute;
     text-align: center;
+    left: 10%;
   }
 }
