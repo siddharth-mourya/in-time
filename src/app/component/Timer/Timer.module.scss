@@ -5,5 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  left: -50%;
+  left: -40%;
+  .currentTime {
+    position: absolute;
+    text-align: center;
+  }
 }

@@ -3,8 +3,9 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
-  outline: 2px dashed rgba(255, 255, 255, 0.7);
+  outline: 2px dashed rgba(255, 255, 255, 0.5);
   padding: 20px;
   transform: rotate(var(--initial-rotate));
   transition: transform 1s linear;

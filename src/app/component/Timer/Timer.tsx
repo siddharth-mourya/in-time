@@ -39,6 +39,10 @@ const Timer = () => {
         radius={175}
         rotateSeconds={60 * 60 * 12}
       />
+      <div className={styles.currentTime}>
+        <h2>{`${currentHours}:${currentMinutes}:${currentSeconds}`}</h2>
+        <h2>8 Feb 2025</h2>
+      </div>
     </div>
   );
 };

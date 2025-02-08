@@ -4,16 +4,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .currentTime {
+  .leftSideBlur {
     position: absolute;
-    left: 50%;
-    text-align: center;
-    h1 {
-      margin-bottom: 0;
-    }
-    h2 {
-      font-size: 3rem;
-      margin-top: 0px;
-    }
+    left: 0%;
+    width: 100px;
+    z-index: 10;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 30%, transparent);
   }
 }
