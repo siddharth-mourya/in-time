@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Jura } from "next/font/google";
 import "../styles/_global.scss";
-import Navbar from "../common/components/Navbar/Navbar";
+// import Navbar from "../common/components/Navbar/Navbar";
 
 const jura = Jura({
   weight: "400",

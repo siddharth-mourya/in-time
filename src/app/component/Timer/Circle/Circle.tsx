@@ -49,6 +49,7 @@ const Circle: React.FC<Circle> = ({
             style={{
               transform: `rotate(${unitRotateDeg}deg) translate(${radius}px) rotate(-${unitRotateDeg}deg)`,
             }}
+            key={`${typeOfCircle}-${index}`}
             className={`${styles.circleElementsWrapper} ${
               index == currentUnit ? styles.activeElement : ""
             }`}
