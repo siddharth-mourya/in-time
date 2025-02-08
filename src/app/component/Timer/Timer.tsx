@@ -3,10 +3,10 @@ import moment from "moment";
 import Circle from "./Circle/Circle";
 import styles from "./Timer.module.scss";
 import { useEffect, useState } from "react";
-import { useMediaQuery } from "@uidotdev/usehooks";
+import useDevice from "@/common/hooks/useDevice";
 
 const Timer = () => {
-  const isSmallSizedScreen = useMediaQuery("(min-width: 480px)");
+  const { isMobile } = useDevice();
   const [currentMinutes, setCurrentMinutes] = useState("");
   const [currentSeconds, setCurrentSeconds] = useState("");
   const [currentHours, setCurrentHours] = useState("");
@@ -26,21 +26,21 @@ const Timer = () => {
         typeOfCircle="second"
         currentUnit={Number(currentSeconds)}
         noOfUnits={60}
-        radius={isSmallSizedScreen ? 375 : 325}
+        radius={isMobile ? 375 : 325}
         rotateSeconds={60}
       />
       <Circle
         typeOfCircle="minute"
         currentUnit={Number(currentMinutes)}
         noOfUnits={60}
-        radius={isSmallSizedScreen ? 275 : 225}
+        radius={isMobile ? 275 : 225}
         rotateSeconds={60 * 60}
       />
       <Circle
         typeOfCircle="hour"
         currentUnit={Number(currentHours)}
         noOfUnits={24}
-        radius={isSmallSizedScreen ? 175 : 125}
+        radius={isMobile ? 175 : 125}
         rotateSeconds={60 * 60 * 12}
       />
       <div className={styles.currentTime}>
