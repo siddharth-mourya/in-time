@@ -7,6 +7,7 @@
   left: -40%;
   .currentTime {
     position: absolute;
+    width: 100px;
     text-align: center;
     @include max-breakpoint($sm) {
       left: 10%;
