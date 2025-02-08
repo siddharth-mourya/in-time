@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jura.className}>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>

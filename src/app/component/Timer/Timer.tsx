@@ -1,24 +1,46 @@
-
+"use client";
+import moment from "moment";
 import Circle from "./Circle/Circle";
 import styles from "./Timer.module.scss";
+import { useEffect, useState } from "react";
 
 const Timer = () => {
-    return <div className={styles.timer}>
-        <Circle noOfUnits={60} radius={350} />
-        <Circle noOfUnits={60} radius={275} />
-        <Circle noOfUnits={24} radius={200} />
-{/* 
-        <div className={styles.secondsCircle}>
-        <Circle noOfUnits={60} radius={350} />
-        </div>
-        <div className={styles.minutesCircle}>
-        <Circle noOfUnits={60} radius={275} />
-        </div>
-        <div className={styles.hourCircle}>
+  const [currentMinutes, setCurrentMinutes] = useState("");
+  const [currentSeconds, setCurrentSeconds] = useState("");
+  const [currentHours, setCurrentHours] = useState("");
+  useEffect(() => {
+    setInterval(() => {
+      setCurrentHours(moment().format("HH"));
+      setCurrentSeconds(moment().format("ss"));
+      setCurrentMinutes(moment().format("mm"));
+    }, 1000);
+  }, []);
 
-        <Circle noOfUnits={24} radius={200} />
-        </div> */}
+  return (
+    <div className={styles.timer}>
+      <Circle
+        typeOfCircle="second"
+        currentUnit={Number(currentSeconds)}
+        noOfUnits={60}
+        radius={375}
+        rotateSeconds={60}
+      />
+      <Circle
+        typeOfCircle="minute"
+        currentUnit={Number(currentMinutes)}
+        noOfUnits={60}
+        radius={275}
+        rotateSeconds={60 * 60}
+      />
+      <Circle
+        typeOfCircle="hour"
+        currentUnit={Number(currentHours)}
+        noOfUnits={24}
+        radius={175}
+        rotateSeconds={60 * 60 * 12}
+      />
     </div>
-}
+  );
+};
 
 export default Timer;

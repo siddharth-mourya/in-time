@@ -3,7 +3,16 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  .circleElements {
+  position: absolute;
+  outline: 2px dashed rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  transform: rotate(var(--initial-rotate));
+  transition: transform 1s linear;
+  .circleElementsWrapper {
     position: absolute;
+    &.activeElement {
+      color: green;
+      font-weight: 700;
+    }
   }
 }

@@ -1,25 +1,9 @@
 .timer {
   position: relative;
-  width: 500px;
-  height: 500px;
+  width: 750px;
+  height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  // .secondsCircle, .hourCircle, .minutesCircle {
-  //   outline: 2px dashed rgba(255, 255, 255, 0.7);
-  // }
-
-  // .secondsCircle {
-  //   width: 750px;
-  //   height: 750px;
-  // }
-  // .minutesCircle {
-  //   width: 550px;
-  //   height: 550px;
-  // }
-  // .hourCircle {
-  //   width: 400px;
-  //   height: 400px;
-  // }
+  left: -50%;
 }

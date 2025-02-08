@@ -4,4 +4,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  .currentTime {
+    position: absolute;
+    left: 60%;
+    text-align: center;
+    h1 {
+      margin-bottom: 0;
+    }
+    h2 {
+      font-size: 3rem;
+      margin-top: 0px;
+    }
+  }
 }
