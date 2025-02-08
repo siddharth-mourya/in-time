@@ -16,6 +16,8 @@ const Timer = () => {
     }, 1000);
   }, []);
 
+  const currentDate = moment().format("Do MMM YYYY");
+
   return (
     <div className={styles.timer}>
       <Circle
@@ -41,7 +43,7 @@ const Timer = () => {
       />
       <div className={styles.currentTime}>
         <h2>{`${currentHours}:${currentMinutes}:${currentSeconds}`}</h2>
-        <h2>8 Feb 2025</h2>
+        <h2>{currentDate}</h2>
       </div>
     </div>
   );
